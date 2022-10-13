@@ -11,6 +11,7 @@ class _SmartHomeStartPageState extends State<SmartHomeStartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -50,20 +51,52 @@ class _SmartHomeStartPageState extends State<SmartHomeStartPage> {
                   ),
                 ],
               ),
+            ),
+            Container(
+              margin: EdgeInsets.all(16),
+              height: 160,
+              // color: Colors.red,
+              decoration: BoxDecoration(color: Colors.grey[100]),
             )
           ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
         child: SizedBox(
-          height: 72,
+          height: 80,
           child: Row(
-            children: const [
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
+            children: [
+              Expanded(
+                  child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.home_outlined),
+                iconSize: 32,
+                color: Colors.blueAccent,
+              )),
+              Expanded(
+                  child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.pie_chart_outline),
+                iconSize: 32,
+                color: Colors.grey,
+              )),
+              Expanded(
+                  child: FloatingActionButton(
+                onPressed: () {},
+                child: Icon(Icons.add),
+              )),
+              Expanded(
+                  child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.mic_none),
+                color: Colors.grey,
+              )),
+              Expanded(
+                  child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.settings_outlined),
+                color: Colors.grey,
+              )),
             ],
           ),
         ),
